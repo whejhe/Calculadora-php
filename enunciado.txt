@@ -23,7 +23,7 @@ Explicación de las nuevas funcionalidades:
 
     Incorporación de condiciones adicionales:
         Validar si la cantidad de productos es par o impar.
-        Análisis de límites para cantidades y precios.
+        Análisis de límites para cantidades y precios.vcvs
 
 // Aplicar el primer descuento si el total supera el límite
 // Calcular el total con el primer descuento
