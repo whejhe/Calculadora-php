@@ -20,9 +20,6 @@
         <label for="precioUnidad">Precio Unidad:</label>
         <input type="number" name="precioUnidad" id="precioUnidad" required>
         <br>
-        <label for="descuento">% de Descuento</label>
-        <input type="number" name="descuento" id="descuento">
-        <br>
         <input class="button" type="submit" value="Calcular">
     </form>
 

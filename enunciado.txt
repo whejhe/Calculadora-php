@@ -21,7 +21,7 @@ Explicación de las nuevas funcionalidades:
     Determinación de paridad (Carlos):
         Se determina si la cantidad de productos es par o impar utilizando el operador de módulo %.
 
-    Incorporación de condiciones adicionales (AlejandroooZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZoooooooooooooooooooooo):
+    Incorporación de condiciones adicionales (Alejandro):
         Validar si la cantidad de productos es par o impar.
         Análisis de límites para cantidades y precios.
 
