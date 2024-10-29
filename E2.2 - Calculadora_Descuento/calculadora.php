@@ -24,6 +24,7 @@
     <!-- Formulario para ingresar las cantidades de los productos -->
     <form action="" method="post">
         <table>
+            <h1>CALCULADORA DE PRODUCTOS</h1>
             <tr>
                 <td><?php echo $productos[0]["nombre"] ?></td>
                 <td>
@@ -53,7 +54,7 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <input type="submit" name="enviar">
+                    <input style="margin-left: 40%; margin-top: 5%;" type="submit" name="enviar">
                 </td>
             </tr>
         </table>
@@ -61,6 +62,10 @@
         <?php
         // Definimos el límite para el descuento
         define('LIMITE_CANTIDAD_ADICIONAL', 0.05);
+        define('LIMITE_CANTIDAD_DESCUENTO', 40);
+        define('LIMITE_CANTIDAD_GRATIS', 100);
+        define('PRECIO_MINIMO', 0); // Precio mínimo para un producto
+        define('PRECIO_MAXIMO', 3000); // Precio máximo que se puede establecer (ejemplo)
 
         // Verificamos si se ha enviado el formulario
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -81,6 +86,11 @@
             $cantPressBanca = max($cantPressBanca, 0);
             $cantBarraOlim = max($cantBarraOlim, 0);
 
+            // Análisis de límites para las cantidades
+            if ($cantManc + $cantPressBanca + $cantBarraOlim > 100) {
+                echo "<br>Advertencia: Se ha superado el límite de 100 unidades. Esto podría causar problemas de inventario.<br>";
+            }
+
             // Calculamos el precio total por tipo de producto
             $sumaPrecioMancu = $cantManc * $productos[0]['precio'];
             $sumaPrecioPressBanc = $cantPressBanca * $productos[1]['precio'];
@@ -90,14 +100,21 @@
             $precioTotal = $sumaPrecioBarraOlim + $sumaPrecioPressBanc + $sumaPrecioMancu;
             $totalUnidades = $cantManc + $cantPressBanca + $cantBarraOlim;
 
+            // Análisis de límites para precios
+            if ($precioTotal < PRECIO_MINIMO) {
+                echo "Error: El precio total no puede ser menor que " . PRECIO_MINIMO . "€.<br>";
+            } elseif ($precioTotal > PRECIO_MAXIMO) {
+                echo "<br>Advertencia: El precio total ha alcanzado el límite máximo de " . PRECIO_MAXIMO . "€.<br>";
+            }
+
             // Verificamos si se aplica un descuento
-            if ($totalUnidades >= 40) {
+            if ($totalUnidades >= LIMITE_CANTIDAD_DESCUENTO) {
                 echo "<h3>Tienes un descuento de un 5%</h3>";
                 $precioConDescuento = $precioTotal - $precioTotal * LIMITE_CANTIDAD_ADICIONAL;
 
                 // Verificamos si el cliente recibe un producto gratuito
-                if ($totalUnidades >= 100 || $precioTotal >= 3000) {
-                    echo "Tienes un producto gratuito: Barra Olimpica x1<br>";
+                if ($totalUnidades >= LIMITE_CANTIDAD_GRATIS || $precioTotal >= 3000) {
+                    echo "<h3>Tienes un producto gratuito: Barra Olimpica x1</h3><br>";
                     $cantBarraOlim++;
                     echo nl2br("\n") . " Cantidad de mancuernas de 20kg: " . $cantManc . nl2br("\n");
                     echo "Cantidad de máquinas de press banca: " . $cantPressBanca . nl2br("\n");
@@ -129,7 +146,7 @@
             echo "Total a pagar sin descuento: " . number_format($precioTotal, 2) . "€" . nl2br("\n");
 
             // Mostramos el total a pagar con descuento, si aplica
-            if ($totalUnidades >= 40) {
+            if ($totalUnidades >= LIMITE_CANTIDAD_DESCUENTO) {
                 echo "Total a pagar con descuento: " . number_format($precioConDescuento, 2) . "€";
             }
         }
