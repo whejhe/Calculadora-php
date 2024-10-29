@@ -3,30 +3,31 @@ TAREA
 Se pide que  completemos el proyecto de la calculadora utilizando OPERACIONES ARITMÉTICAS  En tu código debe aparecer
 Explicación de las nuevas funcionalidades:
 
-    Descuento adicional:
+    Descuento adicional:(Alejandro0)
         Si el número total de productos supera 40 unidades (LIMITE_CANTIDAD_ADICIONAL), se aplica un descuento adicional del 5%.
 
-    Calcular IVA:
+    Calcular IVA(Carlos):
         Se añade el cálculo del IVA sobre el total con descuento. agrega un 15% de IVA (Impuesto sobre el Valor Añadido) al total con descuento, usando operaciones aritméticas.
 
-    Determinar promociones especiales:
+    Determinar promociones especiales(Alejandro):
         Se calcula si el usuario recibe un producto gratis basándose en el total de la compra y en la cantidad de productos.
 
-    Uso de operadores lógicos avanzados:
+    Uso de operadores lógicos avanzados(Carlos):
         Combinación de operadores como &&, ||, ! para evaluar condiciones complejas, como determinar si el usuario es elegible para varios descuentos al mismo tiempo.
 
-    Operaciones aritméticas avanzadas
+    Operaciones aritméticas avanzadas (Alejandro)
         Se calcula el promedio de precio por unidad usando operaciones aritméticas.
 
-    Determinación de paridad:
+    Determinación de paridad (Carlos):
         Se determina si la cantidad de productos es par o impar utilizando el operador de módulo %.
 
-    Incorporación de condiciones adicionales:
+    Incorporación de condiciones adicionales (Alejandro):
         Validar si la cantidad de productos es par o impar.
         Análisis de límites para cantidades y precios.
 
 // Aplicar el primer descuento si el total supera el límite
 // Calcular el total con el primer descuento
+
 // Aplicar descuento adicional si la cantidad total de productos supera un cierto límite
 // Calcular el IVA (Impuesto sobre el Valor Añadido)
 // Calcular el total con impuestos
@@ -38,3 +39,5 @@ Explicación de las nuevas funcionalidades:
 // Agregar los totales y descuentos aplicados
 // Mostrar si se aplica alguna promoción especial
 // Imprimir el resumen con saltos de línea nl2br()
+
+hola que tal
