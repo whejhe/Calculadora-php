@@ -1,22 +1,32 @@
-h1{
+.container{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+}
+
+h1,h2,h3{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     text-decoration: underline;
+    margin-left: 2em;
 }
 
 p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    text-align: left;
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
     color: white;
     padding: 0.5em;
-    text-align: center;
     width: 70%;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 2em;
+}
 
+.warning{
+    background-color: red;
 }
 
 form{
