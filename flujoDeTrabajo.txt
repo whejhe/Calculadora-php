@@ -1,0 +1,62 @@
+1. Clonar el repositorio
+
+    Abre VS Code.
+    Ve a View > Command Palette y selecciona Git: Clone.
+    Pega la URL del repositorio de GitHub y elige una carpeta local donde se guardará.
+    VS Code abrirá automáticamente el proyecto después de clonarlo.
+
+2. Crear una rama de trabajo
+
+Cada empleado debe crear su propia rama de trabajo basada en main:
+
+    Abre el panel de Source Control (icono de la rama).
+    Haz clic en el nombre de la rama actual (por defecto main o master) en la esquina inferior izquierda.
+    Selecciona Create new branch e introduce el nombre de tu rama (rama-empleado1 o rama-empleado2).
+
+3. Desarrollar en la rama de trabajo
+
+Realiza tus cambios en los archivos y guárdalos. Luego, en el panel de Source Control:
+
+    Haz clic en + junto a los archivos modificados para añadirlos al área de preparación (staging area).
+    Escribe un mensaje de commit en el campo de mensaje y presiona ✓ para hacer commit de tus cambios.
+
+4. Actualizar la rama de trabajo con cambios de main
+
+Antes de finalizar, es importante actualizar tu rama de trabajo con los últimos cambios de main:
+
+    Cambia a la rama main desde la esquina inferior izquierda.
+    Ve al panel de Source Control y haz clic en ... > Pull from para descargar los cambios de main desde el repositorio remoto.
+    Cambia de nuevo a tu rama de trabajo (rama-empleado1 o rama-empleado2).
+    Realiza un merge de main con tu rama actual seleccionando ... > Merge branch... y elige main.
+
+5. Resolver conflictos si aparecen
+
+Si aparecen conflictos, VS Code los mostrará resaltados. Para resolverlos:
+
+    Selecciona cada conflicto y elige entre las opciones Accept Current Change, Accept Incoming Change, o Accept Both Changes.
+    Guarda los archivos modificados, ve al panel de Source Control, y haz un commit para guardar la resolución de los conflictos.
+
+6. Subir la rama de trabajo a GitHub
+
+Sube tu rama a GitHub para crear el Pull Request:
+
+    Asegúrate de estar en tu rama (rama-empleado1 o rama-empleado2).
+    Haz clic en ... > Push para subir la rama al repositorio remoto en GitHub.
+
+7. Crear un Pull Request
+
+Ve a tu repositorio en GitHub:
+
+    Verás una notificación con la opción de crear un Pull Request para tu rama recién subida. Haz clic en Compare & pull request.
+    Añade detalles al PR y envíalo para que sea revisado por el encargado del proyecto.
+
+8. Fusionar el PR en main
+
+Una vez aprobado, el encargado del proyecto puede fusionar el PR en main directamente en GitHub.
+9. Eliminar ramas de trabajo (opcional)
+
+Después de la fusión, puedes eliminar la rama local y remota para mantener el repositorio organizado:
+
+    Elimina la rama local: desde VS Code, cambia a main, selecciona la rama y elige Delete Branch.
+    Elimina la rama remota desde GitHub o usa el terminal en VS Code:
+    git push origin --delete rama-empleado1
