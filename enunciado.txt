@@ -28,16 +28,17 @@ Explicación de las nuevas funcionalidades:
 // Aplicar el primer descuento si el total supera el límite
 // Calcular el total con el primer descuento
 
-// Aplicar descuento adicional si la cantidad total de productos supera un cierto límite
+// Aplicar descuento adicional si la cantidad total de productos supera un cierto límite HECHOOOOOO
 // Calcular el IVA (Impuesto sobre el Valor Añadido)
 // Calcular el total con impuestos
-// Determinar si el total de productos es par o impar utilizando el operador %
-// Formatear los totales con number_format()
-// Calcular el precio promedio por producto
-// Mostrar un resumen de la compra
+// Determinar si el total de productos es par o impar utilizando el operador % HECHOOOOOO
+// Formatear los totales con number_format() HECHOOOOOO
+// Calcular el precio promedio por producto HECHOOOOOO
+// Mostrar un resumen de la compra HECHOOOOOO
 // Detalle de cada producto
 // Agregar los totales y descuentos aplicados
 // Mostrar si se aplica alguna promoción especial
 // Imprimir el resumen con saltos de línea nl2br()
-
-hola que tal
+// Agregar los totales y descuentos aplicados HECHOOOOOO
+// Mostrar si se aplica alguna promoción especial HECHOOOOOO
+// Imprimir el resumen con saltos de línea nl2br() HECHOOOOOO
