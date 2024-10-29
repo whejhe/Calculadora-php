@@ -107,6 +107,13 @@
                 echo "<h3>No hay descuento aplicable</h3>";
             }
 
+            // Verificar si el total de unidades es par o impar
+            if ($totalUnidades % 2 == 0) {
+                echo "<br>El total de productos es par.";
+            } else {
+                echo "<br>El total de productos es impar.<br>";
+            }
+
             // Línea separadora
             echo "<br>----------------------------------------------------------------<br>";
 
