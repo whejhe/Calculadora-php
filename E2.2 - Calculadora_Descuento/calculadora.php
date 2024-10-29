@@ -106,6 +106,15 @@
             if ($totalUnidades >= 40) {
                 echo "<h3>Tienes un descuento de un 5%</h3>";
                 $precioConDescuento = $precioTotal - $precioTotal * LIMITE_CANTIDAD_ADICIONAL;
+                if($totalUnidades >= 100 || $precioTotal >= 3000) {
+                    echo "Tienes un producto gratuito: Barra Olimpica x1<br>";
+                    $cantBarraOlim++;
+                    echo nl2br("\n") . " Cantidad de mancuernas de 20kg: " . $_REQUEST["cantMancuerna"] . nl2br("\n");
+                    echo "Cantidad de máquinas de press banca: " . $_REQUEST["cantPressBanca"] . nl2br("\n");
+                    echo "Cantidad de Barra Olim: " . $cantBarraOlim . nl2br("\n");
+                    
+                }
+
             } else {
                 echo "<h3>No hay descuento aplicable</h3>";
             }
