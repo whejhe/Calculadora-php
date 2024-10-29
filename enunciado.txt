@@ -39,3 +39,5 @@ Explicación de las nuevas funcionalidades:
 // Agregar los totales y descuentos aplicados
 // Mostrar si se aplica alguna promoción especial
 // Imprimir el resumen con saltos de línea nl2br()
+
+hola que tal
